@@ -1,0 +1,49 @@
+NPM AND FILE SYSTEM
+npm -version
+
+npm install uppercase
+
+npm ls
+
+node npm.js
+
+Code:
+var http = require('http');
+var uc =require('uppercase');
+http.createServer(function(req,res){
+    res.writeHead(200,{'Content-Type':
+    'text/html'});
+res.write(uc("Hello World I am Ironman"));
+res.end();    
+}).listen(8080);
+
+File system:
+var http = require('http');
+var fs =require('fs');
+http.createServer(function(req,res){
+fs.readFile('file.html',function (err,data){
+    res.writeHead(200,{'Content-Type': 'text/html'});
+    res.write(data);
+    res.end();
+    }) 
+    
+    
+}).listen(8080);
+
+
+HTML DOC:
+<!DOCTYPE html>
+<html>
+<h1>
+	File system modules
+</h1>
+<p>
+	Opening an file module using Npm file system
+</p>
+</html>
+
+
+
+
+
+
